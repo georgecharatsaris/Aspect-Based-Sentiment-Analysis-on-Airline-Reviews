@@ -3,7 +3,7 @@ import torch.nn as nn
 from transformers import BertModel, BertTokenizer
 import torch.nn.functional as F
 import torch.optim as optim
-from Models.utils import *
+from utils import *
 import pandas as pd
 from torch.utils.data import TensorDataset, DataLoader
 from sklearn.utils.class_weight import compute_class_weight

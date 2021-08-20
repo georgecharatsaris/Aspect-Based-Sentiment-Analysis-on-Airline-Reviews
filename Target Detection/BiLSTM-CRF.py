@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torchcrf import CRF
-from Models.utils import *
+from utils import *
 import pandas as pd
 from torch.utils.data import DataLoader, TensorDataset, random_split
 import time
