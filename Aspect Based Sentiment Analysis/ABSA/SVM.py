@@ -71,7 +71,6 @@ if __name__ == "__main__":
 
 
 	# Run grid search and train the model using the best parameters
-	print('ok man!')
 	params = grid_search(SVC(class_weight=weights_dict), d, X_train, y_train)
 	svm = SVC(C=params['C'], gamma=params['gamma'], class_weight=weights_dict)
 	svm.fit(X_train, y_train)
