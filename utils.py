@@ -309,45 +309,6 @@ def w2vMatrix(vocab_size, w2v, to_ix):
 
 
 
-def categorySelection(category, entities, attributes):
-
-    if category == 'AIRLINE':
-        y = entities[category].values
-    elif category == 'SEAT':
-        y = entities[category].values
-    elif category == 'FOOD&DRINKS':
-        y = entities[category].values
-    elif category == 'ENTERTAINMENT':
-        y = entities[category].values
-    elif category == 'CONNECTIVITY':
-        y = entities[category].values
-    elif category == 'AMBIENCE':
-        y = entities[category].values
-    elif category == 'SERVICE':
-        y = entities[category].values
-    elif category == 'GENERAL':
-        y = attributes[category].values
-    elif category == 'PRICES':
-        y = attributes[category].values
-    elif category == 'QUALITY':
-        y = attributes[category].values
-    elif category == 'OPTIONS':
-        y = attributes[category].values
-    elif category == 'COMFORT':
-        y = attributes[category].values
-    elif category == 'WIFI':
-        y = attributes[category].values
-    elif category == 'SCHEDULE':
-        y = attributes[category].values
-    elif category == 'CABIN':
-        y = attributes[category].values
-    else:
-        y = attributes[category].values
-
-    return y
-
-
-
 def leftToRight(texts, starts, ends):
 
     texts_left, texts_right = [], []
