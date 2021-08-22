@@ -309,6 +309,19 @@ def w2vMatrix(vocab_size, w2v, to_ix):
 
 
 
+def posMatrix(size, maxlen, new_texts):
+
+    M = torch.zeros(size=(size, maxlen, maxlen))
+
+    for index, text in enumerate(new_texts):
+        for pos1, _ in enumerate(text.split()):
+            for pos2, _ in enumerate(text.split()):
+                M[index, pos1, pos2] = 1 - (abs(pos1 - pos2))/maxlen
+
+    return M
+
+
+
 def leftToRight(texts, starts, ends):
 
     texts_left, texts_right = [], []
