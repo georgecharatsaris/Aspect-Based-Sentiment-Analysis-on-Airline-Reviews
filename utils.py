@@ -72,13 +72,15 @@ def replaceToken(text, tokens, word):
 
 
 
-def textPreprocessing(text, contractions):
+def textPreprocessing(text, contractions, bert=False):
+    
     
     for word in text.split():
         if word.lower() in contractions.keys():
             text = re.sub(word, contractions[word.lower()], text)
 
-    text = re.sub(r'[^\w\s]', '', text)
+    if not bert:                
+        text = re.sub(r'[^\w\s]', '', text)
 
     for word in text.split():
         if re.search(r'\d+', word) != None:
@@ -292,33 +294,6 @@ def stopWords(stop_words, contractions):
     stop_words = stop_words + (['could', 'might', 'must', 'need', 'shall', 'would'])
 
     return stop_words
-
-
-
-def embeddingsLoader(filepath):
-
-    embeddings_dict = {}
-
-    with open(filepath, 'rb') as f:
-        for line in f:
-            values = line.split()
-            word = values[0]
-            vector = np.asarray(values[1:], "float32")
-            embeddings_dict[word] = vector
-
-    return embeddings_dict
-
-
-
-def embeddingMatrix(vocab_size, embeddings_dict, to_ix):
-
-    embedding_matrix = np.random.uniform(size=(vocab_size, 300))
-    
-    for word, index in to_ix.items():
-        if word in embeddings_dict.keys():
-            embedding_matrix[index] = embeddings_dict[word]
-
-    return embedding_matrix
 
 
 
