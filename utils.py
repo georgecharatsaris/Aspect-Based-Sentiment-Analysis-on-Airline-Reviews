@@ -109,7 +109,7 @@ def prepareVocab(inputs, tags=False):
 
 
 
-def targetDetection(unique_texts, targets):
+def targetDetection1(unique_texts, targets):
 
     starts, ends = [], []
 
@@ -334,14 +334,32 @@ def leftToRight(texts, starts, ends):
 
 
 
+def targetDetection2(texts, aspects):
+
+    starts, ends = [], []
+    
+    for text, aspect in zip(texts, aspects):
+        if aspect != 'NULL':
+            start = text.find(aspect)
+            end = start + len(aspect)
+            starts.append(start)
+            ends.append(end)
+        else:
+            starts.append(0)
+            ends.append(0)
+            
+    return starts, ends
+
+
+
 def get_loc_info(text, start, end, aspect):
 
     words_left = text[:start]
-    words_right = text[end + 1:]
-    
+    words_right = text[end:]
+
     pos_info, offset_info = [], []
 
-    if aspect != "NULL":
+    if aspect != "null":
         for i, _ in enumerate(words_left.split()):
             pos_info.append(1 - abs(i - len(words_left))/len(text.split()))
             offset_info.append(i - len(words_left))
@@ -349,7 +367,7 @@ def get_loc_info(text, start, end, aspect):
         for _ in range(len(aspect.split())):      
             pos_info.append(1.0)
             offset_info.append(0.0)
-        
+
         for j, _ in enumerate(words_right.split()):
             pos_info.append(1 - (j + 1)/len(text.split()))
             offset_info.append((j + 1)/len(text.split()))
@@ -368,8 +386,7 @@ def poSequences(texts, starts, ends, aspects):
 
     for i in range(len(texts)):
         pos_info, offset_info = get_loc_info(texts[i], starts[i], ends[i], aspects[i])
-        if len(pos_info) == 40:
-            print(i)
+
         pos_infos.append(pos_info)
         offset_infos.append(offset_info)
 

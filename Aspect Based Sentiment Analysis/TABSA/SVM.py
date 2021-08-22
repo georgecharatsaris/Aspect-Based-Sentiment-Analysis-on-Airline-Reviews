@@ -3,27 +3,27 @@ import numpy as np
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.feature_extraction.text import TfidfVectorizer
-from utils import *
+import nltk
 from nltk.corpus import stopwords
 from sklearn.utils.class_weight import compute_class_weight
 from sklearn.metrics import classification_report, confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
-import nltk
+from gensim.models import KeyedVectors
+from utils import *
 
 
 
-# ntlk.download('stopwords')
+# nltk.download('stopwords')
 
 
 
 def grid_search(svm, d, X_train, y_train, score='f1_macro'):
 
-	grid = GridSearchCV(estimator=svm, param_grid=d, scoring=score)
-	grid.fit(X_train, y_train)
+    grid = GridSearchCV(estimator=svm, param_grid=d, scoring=score)
+    grid.fit(X_train, y_train)
 
-	return grid.best_params_
-
+    return grid.best_params_
 
 
 if __name__ == "__main__":
@@ -42,16 +42,23 @@ if __name__ == "__main__":
 	df = pd.DataFrame(cols)
 
 
-	# Replace the special tokens and process the texts
+	# Replace the special tokens in the unique sentences
 	new_texts = df['texts'].apply(replaceToken, args=(airlines, 'airline'))
 	new_texts = new_texts.apply(replaceToken, args=(airports, 'airport'))
 	new_texts = new_texts.apply(replaceToken, args=(aircrafts, 'aircraft'))
 	new_texts = new_texts.apply(replaceToken, args=(misc, 'misc'))
+
+
+	# Replace the special tokens in the targets
+	new_targets = df['targets'].apply(replaceToken, args=(airlines, 'airline'))
+	new_targets = new_targets.apply(replaceToken, args=(airports, 'airport'))
+	new_targets = new_targets.apply(replaceToken, args=(aircrafts, 'aircraft'))
+	new_targets = new_targets.apply(replaceToken, args=(misc, 'misc'))
+
+
+	# Some preprocessing of the unique texts and targets
 	new_texts = new_texts.apply(textPreprocessing, args=(contractions, ))
-
-
-	# Create an onehot encoding for each aspect category
-	onehot = df['aspects'].str.get_dummies(sep=' ').values
+	new_targets = new_targets.apply(textPreprocessing, args=(contractions, ))
 
 
 	# Process the stop words and initialize the tfidf vectorizer
@@ -60,9 +67,12 @@ if __name__ == "__main__":
 	tfidf = TfidfVectorizer(stop_words=stop_words)
 
 
-	# Create the sentence representations and concatenate each of them with the respective aspect onehot encoding 
+	# Create the sentence representations and concatenate each of them with the domain-specific embedding matrix 
 	dtm = tfidf.fit_transform(new_texts)
-	inputs = np.concatenate((dtm.toarray(), onehot), axis=-1)
+	w2v = KeyedVectors.load('C:/Users/gxara/Documents/Master Thesis/Datasets/word2vec.kv')
+	size = len(df)
+	embedding_matrix = w2vMatrix(size, w2v, new_targets)
+	inputs = np.concatenate((dtm.toarray(), embedding_matrix), axis=-1)
 
 
 	# Set the parameters for the grid search and create the training and test data

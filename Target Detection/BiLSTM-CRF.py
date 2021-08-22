@@ -162,7 +162,7 @@ if __name__ == '__main__':
 	# Create the vocabulary
 	word_to_ix = prepareVocab(new_texts)
 	# Detect where the target starts and ends in each sentence
-	starts, ends = targetDetection(new_texts, new_targets)
+	starts, ends = targetDetection1(new_texts, new_targets)
 	# Create the BIO scheme based on each target in the sentence, e.g., "Food was delicious" --> ["Food", "was", "delicious"] --> [B, O, O]
 	bio_tags = bioScheme(new_texts, starts, ends)
 	# Create an index for each label (B, I, and O)
