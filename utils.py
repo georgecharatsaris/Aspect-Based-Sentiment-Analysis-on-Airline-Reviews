@@ -391,3 +391,39 @@ def poSequences(texts, starts, ends, aspects):
         offset_infos.append(offset_info)
 
     return pad_sequence(pos_infos, batch_first=True), pad_sequence(offset_infos, batch_first=True)
+
+
+
+def polarityQA(texts, targets, aspects, sentiments):
+    
+    pos, neg, neu = [], [], []
+
+    for i, text in enumerate(texts):
+        if targets[i] != 'NULL':
+            if sentiments[i] == 0:
+                pos.append([text, f'The polarity of the aspect {aspects[i]} of {targets[i]} is positive.', 0])
+                neg.append([text, f'The polarity of the aspect {aspects[i]} of {targets[i]} is negative.', 1])
+                neu.append([text, f'The polarity of the aspect {aspects[i]} of {targets[i]} is neutral.', 0])
+            elif sentiments[i] == 1:
+                pos.append([text, f'The polarity of the aspect {aspects[i]} of {targets[i]} is positive.', 0])
+                neg.append([text, f'The polarity of the aspect {aspects[i]} of {targets[i]} is negative.', 0])
+                neu.append([text, f'The polarity of the aspect {aspects[i]} of {targets[i]} is neutral.', 1])
+            else:
+                pos.append([text, f'The polarity of the aspect {aspects[i]} of {targets[i]} is positive.', 1])
+                neg.append([text, f'The polarity of the aspect {aspects[i]} of {targets[i]} is negative.', 0])
+                neu.append([text, f'The polarity of the aspect {aspects[i]} of {targets[i]} is neutral.', 0])
+        else:
+            if sentiments[i] == 0:
+                pos.append([text, f'The polarity of the aspect {aspects[i]} is positive.', 0])
+                neg.append([text, f'The polarity of the aspect {aspects[i]} is negative.', 1])
+                neu.append([text, f'The polarity of the aspect {aspects[i]} is neutral.', 0])
+            elif sentiments[i] == 1:
+                pos.append([text, f'The polarity of the aspect {aspects[i]} is positive.', 0])
+                neg.append([text, f'The polarity of the aspect {aspects[i]} is negative.', 0])
+                neu.append([text, f'The polarity of the aspect {aspects[i]} is neutral.', 1])
+            else:
+                pos.append([text, f'The polarity of the aspect {aspects[i]} is positive.', 1])
+                neg.append([text, f'The polarity of the aspect {aspects[i]} is negative.', 0])
+                neu.append([text, f'The polarity of the aspect {aspects[i]} is neutral.', 0])
+
+    return pos, neg, neu

@@ -148,12 +148,12 @@ def evaluate(model, loader, criterion, device, predict=False):
 if __name__ == "__main__":
 
 	# Import the necessary files
-	texts, targets, aspects, aspect_cats, aspect_attrs, sentiments = fileLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/absa_dataset.txt')
-	contractions = contractionsLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/contractions.txt')
-	airlines = extraLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/airlinesNew.txt')
-	aircrafts = extraLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/aircraftsNew.txt')
-	misc = extraLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/miscNew.txt')
-	airports = extraLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/airportsNew.txt')
+	texts, targets, aspects, aspect_cats, aspect_attrs, sentiments = fileLoader('absa_dataset.txt')
+	contractions = contractionsLoader('contractions.txt')
+	airlines = extraLoader('airlinesNew.txt')
+	aircrafts = extraLoader('aircraftsNew.txt')
+	misc = extraLoader('miscNew.txt')
+	airports = extraLoader('airportsNew.txt')
 
 
 	# Create the dataframe
@@ -202,7 +202,7 @@ if __name__ == "__main__":
 
 
 	# Load the domain-specific word embeddings
-	w2v = KeyedVectors.load('C:/Users/gxara/Documents/Master Thesis/Datasets/word2vec.kv')
+	w2v = KeyedVectors.load('word2vec.kv')
 	embedding_matrix = w2vMatrix(vocab_size, w2v, word_to_ix)
 	embedding_weight = torch.FloatTensor(embedding_matrix)
 	weights = embedding_weight.to(device)

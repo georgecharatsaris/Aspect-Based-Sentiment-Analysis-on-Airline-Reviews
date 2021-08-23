@@ -32,12 +32,12 @@ def grid_search(svm, d, X_train, y_train, score='f1'):
 if __name__ == "__main__":
 
 	# Import the necessary files
-	texts, targets, aspects, aspect_cats, aspect_attrs, sentiments = fileLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/absa_dataset.txt')
-	contractions = contractionsLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/contractions.txt')
-	airlines = extraLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/airlinesNew.txt')
-	aircrafts = extraLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/aircraftsNew.txt')
-	misc = extraLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/miscNew.txt')
-	airports = extraLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/airportsNew.txt')
+	texts, targets, aspects, aspect_cats, aspect_attrs, sentiments = fileLoader('absa_dataset.txt')
+	contractions = contractionsLoader('contractions.txt')
+	airlines = extraLoader('airlinesNew.txt')
+	aircrafts = extraLoader('aircraftsNew.txt')
+	misc = extraLoader('miscNew.txt')
+	airports = extraLoader('airportsNew.txt')
 
 
 	# Create the dataframe
@@ -88,7 +88,7 @@ if __name__ == "__main__":
 	# Define the vocabulary size
 	vocab_size = dtm.shape[1]
 	# Load the word embeddings
-	word_vectors = KeyedVectors.load('C:/Users/gxara/Documents/Master Thesis/Datasets/word2vec.kv')
+	word_vectors = KeyedVectors.load('word2vec.kv')
 
 
 	# Create the input containing the sentence representation plus the target information in each row (when target == True) or use only the sentence
