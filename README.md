@@ -11,9 +11,9 @@ The dataset was created by me. First, I scraped airline reviews from Skytrax web
 chose some of them, split them into sentences. Then, I annotated the subjective sentences based on my perspective. An example of the annotation
 is as follows:
 
-The $t$ was delicious.
-food
-FOOD#QUALITY
+The $t$ was delicious.  
+food  
+FOOD#QUALITY  
 1
 
 The first line is the sentence with the target word been replaced by the symbol $t$, the second one is the target word, the third is the aspect
