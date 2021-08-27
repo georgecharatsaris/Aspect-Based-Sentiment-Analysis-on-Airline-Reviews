@@ -307,21 +307,35 @@ python dtm.py
 
 ### Authors
 
-David M. Blei, John D. Lafferty
+YequanWang and Minlie Huang and Li Zhao and Xiaoyan Zhu
 
 ### Abstract
 
-A family of probabilistic time series models is developed to analyze the time evolution of 
-topics in large document collections. The approach is to use state space models on the 
-natural parameters of the multinomial distributions that represent the topics. Variational 
-approximations based on Kalman filters and nonparametric wavelet regression are developed 
-to carry out approximate posterior inference over the latent topics. In addition to giving 
-quantitative, predictive models of a sequential corpus, dynamic topic models provide a 
-qualitative window into the contents of a large document collection. The models are 
-demonstrated by analyzing the OCR’ed archives of the journal Science from 1880 through 
-2000.
+Aspect-level sentiment classification is a finegrained
+task in sentiment analysis. Since it
+provides more complete and in-depth results,
+aspect-level sentiment analysis has received
+much attention these years. In this paper, we
+reveal that the sentiment polarity of a sentence
+is not only determined by the content but is
+also highly related to the concerned aspect.
+For instance, “The appetizers are ok, but the
+service is slow.”, for aspect taste, the polarity
+is positive while for service, the polarity
+is negative. Therefore, it is worthwhile to explore
+the connection between an aspect and
+the content of a sentence. To this end, we
+propose an Attention-based Long Short-Term
+Memory Network for aspect-level sentiment
+classification. The attention mechanism can
+concentrate on different parts of a sentence
+when different aspects are taken as input. We
+experiment on the SemEval 2014 dataset and
+results show that our model achieves state-ofthe-
+art performance on aspect-level sentiment
+classification.
 
-[[Paper]](https://dl.acm.org/doi/abs/10.1145/1143844.1143859) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
+[[Paper]](https://aclanthology.org/D16-1058/) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
 
 ### Run Example
 
@@ -334,21 +348,24 @@ python dtm.py
 
 ### Authors
 
-David M. Blei, John D. Lafferty
+Chang Xu, C´ecile Paris, Surya Nepal, and Ross Sparks
 
 ### Abstract
 
-A family of probabilistic time series models is developed to analyze the time evolution of 
-topics in large document collections. The approach is to use state space models on the 
-natural parameters of the multinomial distributions that represent the topics. Variational 
-approximations based on Kalman filters and nonparametric wavelet regression are developed 
-to carry out approximate posterior inference over the latent topics. In addition to giving 
-quantitative, predictive models of a sequential corpus, dynamic topic models provide a 
-qualitative window into the contents of a large document collection. The models are 
-demonstrated by analyzing the OCR’ed archives of the journal Science from 1880 through 
-2000.
+In stance classification, the target on which
+the stance is made defines the boundary of
+the task, and a classifier is usually trained
+for prediction on the same target. In this
+work, we explore the potential for generalizing
+classifiers between different targets,
+and propose a neural model that can apply
+what has been learned from a source target
+to a destination target. We show that our
+model can find useful information shared
+between relevant targets which improves
+generalization in certain scenarios.
 
-[[Paper]](https://dl.acm.org/doi/abs/10.1145/1143844.1143859) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
+[[Paper]](https://aclanthology.org/P18-2123/) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
 
 ### Run Example
 
@@ -360,22 +377,37 @@ python dtm.py
 ## (HEAT):
 
 ### Authors
-
-David M. Blei, John D. Lafferty
+Jiajun Cheng, Shenglin Zhao, Jiani Zhang, Irwin King, Xin Zhang, Hui Wang
 
 ### Abstract
 
-A family of probabilistic time series models is developed to analyze the time evolution of 
-topics in large document collections. The approach is to use state space models on the 
-natural parameters of the multinomial distributions that represent the topics. Variational 
-approximations based on Kalman filters and nonparametric wavelet regression are developed 
-to carry out approximate posterior inference over the latent topics. In addition to giving 
-quantitative, predictive models of a sequential corpus, dynamic topic models provide a 
-qualitative window into the contents of a large document collection. The models are 
-demonstrated by analyzing the OCR’ed archives of the journal Science from 1880 through 
-2000.
+Aspect-level sentiment classification is a fine-grained sentiment
+analysis task, which aims to predict the sentiment of a text in different
+aspects. One key point of this task is to allocate the appropriate
+sentiment words for the given aspect. Recent work exploits attention
+neural networks to allocate sentiment words and achieves
+the state-of-the-art performance. However, the prior work only
+attends to the sentiment information and ignores the aspect-related
+information in the text, which may cause mismatching between
+the sentiment words and the aspects when an unrelated sentiment
+word is semantically meaningful for the given aspect. To solve this
+problem, we propose a HiErarchical ATtention (HEAT) network for
+aspect-level sentiment classification. The HEAT network contains
+a hierarchical attention module, consisting of aspect attention and
+sentiment attention. The aspect attention extracts the aspect-related
+information to guide the sentiment attention to better allocate
+aspect-specific sentiment words of the text. Moreover, the HEAT
+network supports to extract the aspect terms together with aspectlevel
+sentiment classification by introducing the Bernoulli attention
+mechanism. To verify the proposed method, we conduct experiments
+on restaurant and laptop review data sets from SemEval
+at both the sentence level and the review level. The experimental
+results show that our model better allocates appropriate sentiment
+expressions for a given aspect benefiting from the guidance of aspect
+terms. Moreover, our method achieves better performance on
+aspect-level sentiment classification than state-of-the-art models.
 
-[[Paper]](https://dl.acm.org/doi/abs/10.1145/1143844.1143859) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
+[[Paper]](https://dl.acm.org/doi/abs/10.1145/3132847.3133037) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
 
 ### Run Example
 
@@ -397,21 +429,22 @@ python dtm.py
 
 ### Authors
 
-David M. Blei, John D. Lafferty
+Duyu Tang, Bing Qin, Xiaocheng Feng, Ting Liu
 
 ### Abstract
 
-A family of probabilistic time series models is developed to analyze the time evolution of 
-topics in large document collections. The approach is to use state space models on the 
-natural parameters of the multinomial distributions that represent the topics. Variational 
-approximations based on Kalman filters and nonparametric wavelet regression are developed 
-to carry out approximate posterior inference over the latent topics. In addition to giving 
-quantitative, predictive models of a sequential corpus, dynamic topic models provide a 
-qualitative window into the contents of a large document collection. The models are 
-demonstrated by analyzing the OCR’ed archives of the journal Science from 1880 through 
-2000.
+Target-dependent sentiment classification remains a challenge: modeling the semantic relatedness
+of a target with its context words in a sentence. Different context words have different
+influences on determining the sentiment polarity of a sentence towards the target. Therefore, it
+is desirable to integrate the connections between target word and context words when building a
+learning system. In this paper, we develop two target dependent long short-term memory (LSTM)
+models, where target information is automatically taken into account. We evaluate our methods
+on a benchmark dataset from Twitter. Empirical results show that modeling sentence representation
+with standard LSTM does not perform well. Incorporating target information into LSTM
+can significantly boost the classification accuracy. The target-dependent LSTM models achieve
+state-of-the-art performances without using syntactic parser or external sentiment lexicons.
 
-[[Paper]](https://dl.acm.org/doi/abs/10.1145/1143844.1143859) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
+[[Paper]](https://aclanthology.org/C16-1311/) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
 
 ### Run Example
 
@@ -424,21 +457,32 @@ python dtm.py
 
 ### Authors
 
-David M. Blei, John D. Lafferty
+Dehong Ma, Sujian Li1, Xiaodong Zhang, Houfeng Wang
 
 ### Abstract
 
-A family of probabilistic time series models is developed to analyze the time evolution of 
-topics in large document collections. The approach is to use state space models on the 
-natural parameters of the multinomial distributions that represent the topics. Variational 
-approximations based on Kalman filters and nonparametric wavelet regression are developed 
-to carry out approximate posterior inference over the latent topics. In addition to giving 
-quantitative, predictive models of a sequential corpus, dynamic topic models provide a 
-qualitative window into the contents of a large document collection. The models are 
-demonstrated by analyzing the OCR’ed archives of the journal Science from 1880 through 
-2000.
+Aspect-level sentiment classification aims at identifying
+the sentiment polarity of specific target in
+its context. Previous approaches have realized
+the importance of targets in sentiment classification
+and developed various methods with the goal
+of precisely modeling their contexts via generating
+target-specific representations. However, these
+studies always ignore the separate modeling of targets.
+In this paper, we argue that both targets and
+contexts deserve special treatment and need to be
+learned their own representations via interactive
+learning. Then, we propose the interactive attention
+networks (IAN) to interactively learn attentions in
+the contexts and targets, and generate the representations
+for targets and contexts separately. With this
+design, the IAN model can well represent a target
+and its collocative context, which is helpful to sentiment
+classification. Experimental results on SemEval
+2014 Datasets demonstrate the effectiveness
+of our model.
 
-[[Paper]](https://dl.acm.org/doi/abs/10.1145/1143844.1143859) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
+[[Paper]](https://arxiv.org/abs/1709.00893) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
 
 ### Run Example
 
@@ -451,21 +495,33 @@ python dtm.py
 
 ### Authors
 
-David M. Blei, John D. Lafferty
+Duyu Tang, Bing Qin, Ting Liu
 
 ### Abstract
 
-A family of probabilistic time series models is developed to analyze the time evolution of 
-topics in large document collections. The approach is to use state space models on the 
-natural parameters of the multinomial distributions that represent the topics. Variational 
-approximations based on Kalman filters and nonparametric wavelet regression are developed 
-to carry out approximate posterior inference over the latent topics. In addition to giving 
-quantitative, predictive models of a sequential corpus, dynamic topic models provide a 
-qualitative window into the contents of a large document collection. The models are 
-demonstrated by analyzing the OCR’ed archives of the journal Science from 1880 through 
-2000.
+We introduce a deep memory network for
+aspect level sentiment classification. Unlike
+feature-based SVM and sequential neural
+models such as LSTM, this approach explicitly
+captures the importance of each context
+word when inferring the sentiment polarity
+of an aspect. Such importance degree and
+text representation are calculated with multiple
+computational layers, each of which is a
+neural attention model over an external memory.
+Experiments on laptop and restaurant
+datasets demonstrate that our approach performs
+comparable to state-of-art feature based
+SVM system, and substantially better than
+LSTM and attention-based LSTM architectures.
+On both datasets we show that multiple
+computational layers could improve the
+performance. Moreover, our approach is also
+fast. The deep memory network with 9 layers
+is 15 times faster than LSTM with a CPU
+implementation.
 
-[[Paper]](https://dl.acm.org/doi/abs/10.1145/1143844.1143859) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
+[[Paper]](https://arxiv.org/abs/1605.08900) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
 
 ### Run Example
 
@@ -478,21 +534,38 @@ python dtm.py
 
 ### Authors
 
-David M. Blei, John D. Lafferty
+Peng Chen, Zhongqian Sun, Lidong Bing, Wei Yang
 
 ### Abstract
 
-A family of probabilistic time series models is developed to analyze the time evolution of 
-topics in large document collections. The approach is to use state space models on the 
-natural parameters of the multinomial distributions that represent the topics. Variational 
-approximations based on Kalman filters and nonparametric wavelet regression are developed 
-to carry out approximate posterior inference over the latent topics. In addition to giving 
-quantitative, predictive models of a sequential corpus, dynamic topic models provide a 
-qualitative window into the contents of a large document collection. The models are 
-demonstrated by analyzing the OCR’ed archives of the journal Science from 1880 through 
-2000.
+We propose a novel framework based on
+neural networks to identify the sentiment
+of opinion targets in a comment/review.
+Our framework adopts multiple-attention
+mechanism to capture sentiment features
+separated by a long distance, so that it
+is more robust against irrelevant information.
+The results of multiple attentions
+are non-linearly combined with a recurrent
+neural network, which strengthens the
+expressive power of our model for handling
+more complications. The weightedmemory
+mechanism not only helps us
+avoid the labor-intensive feature engineering
+work, but also provides a tailor-made
+memory for different opinion targets of a
+sentence. We examine the merit of our
+model on four datasets: two are from SemEval2014,
+i.e. reviews of restaurants and
+laptops; a twitter dataset, for testing its
+performance on social media data; and a
+Chinese news comment dataset, for testing
+its language sensitivity. The experimental
+results show that our model consistently
+outperforms the state-of-the-art methods
+on different types of data.
 
-[[Paper]](https://dl.acm.org/doi/abs/10.1145/1143844.1143859) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
+[[Paper]](https://aclanthology.org/D17-1047/) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
 
 ### Run Example
 
@@ -507,21 +580,24 @@ python dtm.py
 
 ### Authors
 
-David M. Blei, John D. Lafferty
+Chi Sun, Luyao Huang, Xipeng Qiu
 
 ### Abstract
 
-A family of probabilistic time series models is developed to analyze the time evolution of 
-topics in large document collections. The approach is to use state space models on the 
-natural parameters of the multinomial distributions that represent the topics. Variational 
-approximations based on Kalman filters and nonparametric wavelet regression are developed 
-to carry out approximate posterior inference over the latent topics. In addition to giving 
-quantitative, predictive models of a sequential corpus, dynamic topic models provide a 
-qualitative window into the contents of a large document collection. The models are 
-demonstrated by analyzing the OCR’ed archives of the journal Science from 1880 through 
-2000.
+Aspect-based sentiment analysis (ABSA),
+which aims to identify fine-grained opinion
+polarity towards a specific aspect, is a challenging
+subtask of sentiment analysis (SA).
+In this paper, we construct an auxiliary sentence
+from the aspect and convert ABSA to a
+sentence-pair classification task, such as question
+answering (QA) and natural language inference
+(NLI). We fine-tune the pre-trained
+model from BERT and achieve new state-ofthe-
+art results on SentiHood and SemEval-
+2014 Task 4 datasets.
 
-[[Paper]](https://dl.acm.org/doi/abs/10.1145/1143844.1143859) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
+[[Paper]](https://arxiv.org/abs/1903.09588) [[code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/dtm.py)
 
 ### Run Example
 
