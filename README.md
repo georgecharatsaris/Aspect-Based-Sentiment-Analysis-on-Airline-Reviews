@@ -107,13 +107,13 @@ scenarios.Overall, our book chapter cover the broad spectrum of NMF in the conte
 clustering and topic modeling, from fundamental algorithmic behaviors to practical visual 
 analytics systems.
 
-[[Paper]](https://link.springer.com/chapter/10.1007/978-3-319-09259-1_7) [[Code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/nmf.py)
+[[Paper]](https://link.springer.com/chapter/10.1007/978-3-319-09259-1_7) [[Code]](https://github.com/georgecharatsaris/Aspect-Based-Sentiment-Analysis-on-Airline-Reviews/blob/main/Target%20Detection/CNN-BiLSTM-CRF.py)
 
 ### Run Example
 
 ```
-cd models
-python nmf.py
+cd Target Detection
+python CNN-BiLSTM-CRF.py
 ```
 
 ## BERT:
@@ -139,13 +139,13 @@ we present a new topic model called ProdLDA, that replaces the mixture model in 
 product of experts. By changing only one line of code from LDA, we find that ProdLDA yields 
 much more interpretable topics, even if LDA is trained via collapsed Gibbs sampling.
 
-[[Paper]](https://arxiv.org/abs/1703.01488) [[Code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/prodlda.py)
+[[Paper]](https://arxiv.org/abs/1703.01488) [[Code]](https://github.com/georgecharatsaris/Aspect-Based-Sentiment-Analysis-on-Airline-Reviews/blob/main/Target%20Detection/BERT.py)
 
 ### Run Example
 
 ```
-cd models
-python prodlda.py
+cd Target Detection
+python BERT.py
 ```
 
 # Category Detection
