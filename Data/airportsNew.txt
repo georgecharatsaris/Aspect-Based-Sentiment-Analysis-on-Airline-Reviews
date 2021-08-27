@@ -1,0 +1,171 @@
+airport
+airports
+Comoros
+PEK
+Grand Cayman
+Chicago O'Hare
+O'Hare
+Hong Kong
+Taipei
+Brisbane
+Gatwick
+Sydney
+Taipei
+Singapore
+TPE
+Shanghai Pudong Airport
+SYD
+Shenzhen
+LAX
+MNL
+FCO
+Guyana
+Hong Kong
+Verona
+Timisoara
+Chisinau
+Pokhara and Kathmandu airport
+Addis
+Sana'a
+Yakutsk
+Vnukovo
+Fuerteventura
+Las Palmas
+Edmonton
+T&T
+Xiamen Airport
+MIA
+Galela
+Kao
+Dalian airport
+Denver
+GCM
+Bali
+LA
+Denpasar
+London
+Shanghai
+Narita
+Guangzhou
+Bangkok
+Taoyuan Airport
+PVG
+Kunming
+Tashkent
+Delhi
+Tokyo
+Sapporo
+Bangladesh
+Singapore
+Chicago
+Kuala Lumpur
+St. Louis
+Boston
+Georgetown
+Toronto
+Tashkent
+Pittsburgh
+New York
+JFK
+FOC
+Fuzhou
+Tromso
+Kirkenes
+Vadso
+Vardo
+Socotra
+Amsterdam
+Mumbai
+LGW
+Siem Reap
+Pearson Airport
+Taiyuan airport
+Port of Spain
+Miami
+Trinidad
+Tobago
+Domodedovo airport
+LCY
+AMS
+Kyiv
+Moscow
+Beijing
+Helsinki airport
+MAN
+SIN
+SFO
+NGO
+KUL
+Philadelphia
+POS
+Heathrow
+Vancouver
+Taoyuan
+Tunis
+Keflavik
+Manchester
+HEL
+LPA
+Barbados
+Crete
+Auckland
+XMN
+London Gatwick
+ABJ
+TUN
+Bali
+Orlando
+Rhodes
+Rome
+Basel
+Barbados airport
+Suvarnabhumi
+CDG
+Lyon
+Enfidha
+Taiwan
+Xiamen
+Paris Orly
+MUC
+PHL
+KIN
+Antigua
+PSA airport
+Athens
+Munich
+KEF airport
+HKG
+DXB
+Surat Thani
+LAN
+Kolkata
+Tehran
+Wuhan
+Phuket Airport
+Bristol
+Naples
+GRU
+Hanoi T1
+Melbourne
+BOG
+SAL
+New Delhi
+Mumbai airport
+Bilbao
+Barcelona airport
+LHR
+Hue Airport
+Brussels
+GYE
+Sao Paulo
+Boston Praia
+Mindelo
+Guayaquil airport
+Bogota
+San Jose
+Reykjavik
+Los Angeles
+Johannesburg
+Lisbon
+MBJ
+Florence

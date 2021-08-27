@@ -26,7 +26,7 @@ use the word "NULL" as the target word.
 - airports:names of the airports included in the dataset
 - aircrafts:names of the aircrafts included in the dataset
 - misc:names of the products, companies, foods, etc., included in the dataset
-- Word2Vec embeddings:domain-specific word embeddings trained on the dataset
+- Word2Vec embeddings:domain-specific word embeddings trained on the dataset using Word2Vec.py
 - contractions: contractions dictionary 
 
 # Installation

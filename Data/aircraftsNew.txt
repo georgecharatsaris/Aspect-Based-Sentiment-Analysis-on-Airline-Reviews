@@ -1,0 +1,45 @@
+aircraft
+aircrafts
+737
+A330
+Boeing 777
+Saab 2000
+SAAB 2000
+737-200 Combi
+737-300
+Boeing 737-700
+Dash8
+Fokker 50s
+146s
+146/RJ85
+Boeing 787-8
+F50
+767
+Airbus A350-900
+Boeing 737
+737-800
+A333
+B738
+A320
+Boeing
+A320-200
+A319
+A330-200
+A380
+Boeing 787
+A350
+Boeing 788
+B777
+A330-200
+A319/320
+B787
+B777 aircraft
+Airbus
+E-190
+CRJ
+A321-200
+Boeing 767
+777
+A321 Neo
+Boeing 737-800
+319
