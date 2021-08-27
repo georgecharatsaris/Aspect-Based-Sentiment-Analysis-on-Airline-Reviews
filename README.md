@@ -22,11 +22,12 @@ use the word "NULL" as the target word.
 
 # Useful Files
 
-- airlines:
-- airports:
-- aircrafts:
-- misc:
-- Word2Vec embeddings:
+- airlines:names of the airlines included in the dataset
+- airports:names of the airports included in the dataset
+- aircrafts:names of the aircrafts included in the dataset
+- misc:names of the products, companies, foods, etc., included in the dataset
+- Word2Vec embeddings:domain-specific word embeddings trained on the dataset
+- contractions: contractions dictionary 
 
 # Installation
 
@@ -42,28 +43,42 @@ pip install -r requirements.txt
 
 ### Authors
 
-David M. Blei, Andrew Y. Ng, Michael I. Jordan
+Athanasios Giannakopoulos, Claudiu Musat, Andreea Hossmann
 
 ### Abstract
 
-We describe latent Dirichlet allocation (LDA), a generative probabilistic model for 
-collections of discrete data such as text corpora. LDA is a three-level hierarchical 
-Bayesian model, in which each item of a collection is modeled as a finite mixture over an 
-underlying set of topics. Each topic is, in turn, modeled as an infinite mixture over an 
-underlying set of topic probabilities. In the context of text modeling, the topic 
-probabilities provide an explicit representation of a document. We present efficient 
-approximate inference techniques based on variational methods and an EM algorithm for 
-empirical Bayes parameter estimation. We report results in document modeling, text 
-classification, and collaborative filtering, comparing to a mixture of unigrams model and 
-the probabilistic LSI model.
+Aspect Term Extraction (ATE) identifies
+opinionated aspect terms in texts and is
+one of the tasks in the SemEval Aspect
+Based Sentiment Analysis (ABSA)
+contest. The small amount of available
+datasets for supervised ATE and the
+costly human annotation for aspect term
+labelling give rise to the need for unsupervised
+ATE. In this paper, we introduce
+an architecture that achieves top-ranking
+performance for supervised ATE. Moreover,
+it can be used efficiently as feature
+extractor and classifier for unsupervised
+ATE. Our second contribution is a
+method to automatically construct datasets
+for ATE. We train a classifier on our automatically
+labelled datasets and evaluate it
+on the human annotated SemEval ABSA
+test sets. Compared to a strong rule-based
+baseline, we obtain a dramatically higher
+F-score and attain precision values above
+80%. Our unsupervised method beats the
+supervised ABSA baseline from SemEval,
+while preserving high precision scores.
 
-[[Paper]](https://jmlr.org/papers/volume3/blei03a/blei03a.pdf) [[Code]](https://github.com/georgecharatsaris/Topic-Models-Collection/blob/main/models/lda.py)
+[[Paper]](https://aclanthology.org/W17-5224/) [[Code]](https://github.com/georgecharatsaris/Aspect-Based-Sentiment-Analysis-on-Airline-Reviews/blob/main/Target%20Detection/BiLSTM-CRF.py)
 
 ### Run Example
 
 ```
-cd models
-python lda.py
+cd Target Detection
+python BiLSTM-CRF.py
 ```
 
 ## CNN+BiLSTM+CRF:
