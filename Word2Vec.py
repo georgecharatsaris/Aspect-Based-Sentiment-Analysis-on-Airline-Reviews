@@ -36,11 +36,11 @@ def noNumbers(text):
 
 if __name__ == "__main__":
 
-	df = pd.read_excel('C:/Users/gxara/Documents/Master Thesis/Datasets/reviews airline.xlsx')
+	df = pd.read_excel('reviews airline.xlsx')
 	texts = df['review_text'].astype('str')
 
 
-	contractions = contractionsLoader('C:/Users/gxara/Documents/Master Thesis/Datasets/contractions.txt')
+	contractions = contractionsLoader('contractions.txt')
 	new_texts = texts.apply(textPreprocessing)
 	new_texts = new_texts.apply(preprocessing, args=(contractions, ))
 	new_texts = new_texts.apply(noNumbers)
@@ -48,4 +48,4 @@ if __name__ == "__main__":
 
 	w2v = trainVectors(new_texts, min_df=1, size=300, sg=0)
 	word_vectors = w2v.wv
-	word_vectors.save('C:/Users/gxara/Documents/Master Thesis/Datasets/word2vec.kv')
+	word_vectors.save('word2vec.kv')
