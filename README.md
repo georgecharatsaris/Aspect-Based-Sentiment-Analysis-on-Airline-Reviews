@@ -27,7 +27,13 @@ use the word "NULL" as the target word.
 - aircrafts:names of the aircrafts included in the dataset
 - misc:names of the products, companies, foods, etc., included in the dataset
 - Word2Vec embeddings:domain-specific word embeddings trained on the dataset using Word2Vec.py
-- contractions: contractions dictionary 
+- contractions: contractions dictionary
+
+# Execution Tips
+
+- Change the directories when you load a file to match your settings
+- Use GPU for the Deep Learning Models and BERT
+- The paremeters are those that gave the best results for my thesis
 
 # Installation
 
